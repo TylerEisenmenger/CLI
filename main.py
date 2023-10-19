@@ -1,16 +1,22 @@
-# This is a sample Python script.
+import sys
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Command line arguments are passed into Python as a list of strings in sys.argv
+def main():
+    # Check if there are command line arguments
+    # There will always be one: the script name
+    if len(sys.argv) > 1:
+        lengths = 0
+        for arg in sys.argv[1:]:
+            lengths += len(arg)
+        print("You entered", len(sys.argv) - 1, "command line arguments.")
+        print("The average number of characters per argument is", lengths / (len(sys.argv) - 1), ".")
+    else:
+        print("No command line arguments were given.")
+
+if __name__ == "__main__":
+    main()
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
