@@ -5,11 +5,11 @@ def main():
     # Check if there are command line arguments
     # There will always be one: the script name
     if len(sys.argv) > 1:
-        lengths = 0
+        length = 0
         for arg in sys.argv[1:]:
-            lengths += len(arg)
+            length += len(arg)
         print("You entered", len(sys.argv) - 1, "command line arguments.")
-        print("The average number of characters per argument is", lengths / (len(sys.argv) - 1), ".")
+        print("The average number of characters per argument is", length / (len(sys.argv) - 1), ".")
     else:
         print("No command line arguments were given.")
 
